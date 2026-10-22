@@ -1,0 +1,1008 @@
+{
+ "items": [
+  {
+   "id": "Alienbeam",
+   "name": "Alienbeam",
+   "img": "Alienbeam.png",
+   "price": 0
+  },
+  {
+   "id": "Amerilaser",
+   "name": "Amerilaser",
+   "img": "Amerilaser.png",
+   "price": 0
+  },
+  {
+   "id": "Australis",
+   "name": "Australis",
+   "img": "Australis.png",
+   "price": 0
+  },
+  {
+   "id": "BA2",
+   "name": "BA2",
+   "img": "BA2.png",
+   "price": 0
+  },
+  {
+   "id": "Bat",
+   "name": "Bat",
+   "img": "Bat.png",
+   "price": 16.49
+  },
+  {
+   "id": "Battleaxe",
+   "name": "Battleaxe",
+   "img": "Battleaxe.png",
+   "price": 0
+  },
+  {
+   "id": "Batwing",
+   "name": "Batwing",
+   "img": "Batwing.png",
+   "price": 8.39
+  },
+  {
+   "id": "Bauble",
+   "name": "Bauble",
+   "img": "Bauble.png",
+   "price": 0
+  },
+  {
+   "id": "Beachy",
+   "name": "Beachy",
+   "img": "Beachy.png",
+   "price": 0
+  },
+  {
+   "id": "Bioblade",
+   "name": "Bioblade",
+   "img": "Bioblade.png",
+   "price": 0
+  },
+  {
+   "id": "Blaster",
+   "name": "Blaster",
+   "img": "Blaster.png",
+   "price": 0
+  },
+  {
+   "id": "Blizzard",
+   "name": "Blizzard",
+   "img": "Blizzard.png",
+   "price": 0
+  },
+  {
+   "id": "Bloom",
+   "name": "Bloom",
+   "img": "Bloom.png",
+   "price": 0
+  },
+  {
+   "id": "Blossom",
+   "name": "Blossom",
+   "img": "Blossom.png",
+   "price": 0
+  },
+  {
+   "id": "Blue_Seer",
+   "name": "Blue Seer",
+   "img": "Blue_Seer.png",
+   "price": 0
+  },
+  {
+   "id": "Boneblade",
+   "name": "Boneblade",
+   "img": "Boneblade.png",
+   "price": 0
+  },
+  {
+   "id": "Borealis",
+   "name": "Borealis",
+   "img": "Borealis.png",
+   "price": 0
+  },
+  {
+   "id": "CBB",
+   "name": "CBB",
+   "img": "CBB.png",
+   "price": 0
+  },
+  {
+   "id": "CCC",
+   "name": "CCC",
+   "img": "CCC.png",
+   "price": 0
+  },
+  {
+   "id": "CCF",
+   "name": "CCF",
+   "img": "CCF.png",
+   "price": 0
+  },
+  {
+   "id": "CDB",
+   "name": "CDB",
+   "img": "CDB.png",
+   "price": 0
+  },
+  {
+   "id": "CDS",
+   "name": "CDS",
+   "img": "CDS.png",
+   "price": 0
+  },
+  {
+   "id": "CEB",
+   "name": "CEB",
+   "img": "CEB.png",
+   "price": 0
+  },
+  {
+   "id": "CFang",
+   "name": "CFang",
+   "img": "CFang.png",
+   "price": 0
+  },
+  {
+   "id": "CGB",
+   "name": "CGB",
+   "img": "CGB.png",
+   "price": 0
+  },
+  {
+   "id": "CGem",
+   "name": "CGem",
+   "img": "CGem.png",
+   "price": 0
+  },
+  {
+   "id": "CHeat",
+   "name": "CHeat",
+   "img": "CHeat.png",
+   "price": 0
+  },
+  {
+   "id": "CLB",
+   "name": "CLB",
+   "img": "CLB.png",
+   "price": 0
+  },
+  {
+   "id": "CLaser",
+   "name": "CLaser",
+   "img": "CLaser.png",
+   "price": 0
+  },
+  {
+   "id": "CLuger",
+   "name": "CLuger",
+   "img": "CLuger.png",
+   "price": 0
+  },
+  {
+   "id": "CSG",
+   "name": "CSG",
+   "img": "CSG.png",
+   "price": 0
+  },
+  {
+   "id": "CSaw",
+   "name": "CSaw",
+   "img": "CSaw.png",
+   "price": 0
+  },
+  {
+   "id": "CSeer",
+   "name": "CSeer",
+   "img": "CSeer.png",
+   "price": 0
+  },
+  {
+   "id": "CShark",
+   "name": "CShark",
+   "img": "CShark.png",
+   "price": 0
+  },
+  {
+   "id": "CSlasher",
+   "name": "CSlasher",
+   "img": "CSlasher.png",
+   "price": 0
+  },
+  {
+   "id": "CTides",
+   "name": "CTides",
+   "img": "CTides.png",
+   "price": 0
+  },
+  {
+   "id": "Candleflame",
+   "name": "Candleflame",
+   "img": "Candleflame.png",
+   "price": 0
+  },
+  {
+   "id": "Candy",
+   "name": "Candy",
+   "img": "Candy.png",
+   "price": 11.99
+  },
+  {
+   "id": "Celestial",
+   "name": "Celestial",
+   "img": "Celestial.png",
+   "price": 0
+  },
+  {
+   "id": "Chill",
+   "name": "Chill",
+   "img": "Chill.png",
+   "price": 0
+  },
+  {
+   "id": "Clockwork",
+   "name": "Clockwork",
+   "img": "Clockwork.png",
+   "price": 0
+  },
+  {
+   "id": "Constellation",
+   "name": "Constellation",
+   "img": "Constellation.png",
+   "price": 0
+  },
+  {
+   "id": "Cookieblade",
+   "name": "Cookieblade",
+   "img": "Cookieblade.png",
+   "price": 0
+  },
+  {
+   "id": "Cookiecane",
+   "name": "Cookiecane",
+   "img": "Cookiecane.png",
+   "price": 0
+  },
+  {
+   "id": "Darkbringer",
+   "name": "Darkbringer",
+   "img": "Darkbringer.png",
+   "price": 5.19
+  },
+  {
+   "id": "Darkshot",
+   "name": "Darkshot",
+   "img": "Darkshot.png",
+   "price": 0
+  },
+  {
+   "id": "Darksword",
+   "name": "Darksword",
+   "img": "Darksword.png",
+   "price": 0
+  },
+  {
+   "id": "Deathshard",
+   "name": "Deathshard",
+   "img": "Deathshard.png",
+   "price": 0
+  },
+  {
+   "id": "Eggblade",
+   "name": "Eggblade",
+   "img": "Eggblade.png",
+   "price": 0
+  },
+  {
+   "id": "Elderwood_Blade",
+   "name": "Elderwood Blade",
+   "img": "Elderwood_Blade.png",
+   "price": 0
+  },
+  {
+   "id": "Elderwood_Revolver",
+   "name": "Elderwood Revolver",
+   "img": "Elderwood_Revolver.png",
+   "price": 0
+  },
+  {
+   "id": "Elderwood_Scythe",
+   "name": "Elderwood Scythe",
+   "img": "Elderwood_Scythe.png",
+   "price": 0
+  },
+  {
+   "id": "Eternal",
+   "name": "Eternal",
+   "img": "Eternal.png",
+   "price": 0
+  },
+  {
+   "id": "Eternal2",
+   "name": "Eternal2",
+   "img": "Eternal2.png",
+   "price": 0
+  },
+  {
+   "id": "Eternal3",
+   "name": "Eternal3",
+   "img": "Eternal3.png",
+   "price": 0
+  },
+  {
+   "id": "Eternal4",
+   "name": "Eternal4",
+   "img": "Eternal4.png",
+   "price": 0
+  },
+  {
+   "id": "Eternalcane",
+   "name": "Eternalcane",
+   "img": "Eternalcane.png",
+   "price": 0
+  },
+  {
+   "id": "Evergreen",
+   "name": "Evergreen",
+   "img": "Evergreen.png",
+   "price": 0
+  },
+  {
+   "id": "Evergun",
+   "name": "Evergun",
+   "img": "Evergun.png",
+   "price": 0
+  },
+  {
+   "id": "Fang",
+   "name": "Fang",
+   "img": "Fang.png",
+   "price": 0
+  },
+  {
+   "id": "Flames",
+   "name": "Flames",
+   "img": "Flames.png",
+   "price": 0
+  },
+  {
+   "id": "Flora",
+   "name": "Flora",
+   "img": "Flora.png",
+   "price": 0
+  },
+  {
+   "id": "Flowerwood",
+   "name": "Flowerwood",
+   "img": "Flowerwood.png",
+   "price": 0
+  },
+  {
+   "id": "Flowerwood_Gun",
+   "name": "Flowerwood Gun",
+   "img": "Flowerwood_Gun.png",
+   "price": 0
+  },
+  {
+   "id": "Frostbite",
+   "name": "Frostbite",
+   "img": "Frostbite.png",
+   "price": 0
+  },
+  {
+   "id": "Frostsaber",
+   "name": "Frostsaber",
+   "img": "Frostsaber.png",
+   "price": 0
+  },
+  {
+   "id": "Gemstone",
+   "name": "Gemstone",
+   "img": "Gemstone.png",
+   "price": 0
+  },
+  {
+   "id": "Ghostblade",
+   "name": "Ghostblade",
+   "img": "Ghostblade.png",
+   "price": 0
+  },
+  {
+   "id": "Ginger_Luger",
+   "name": "Ginger Luger",
+   "img": "Ginger_Luger.png",
+   "price": 0
+  },
+  {
+   "id": "Gingerblade",
+   "name": "Gingerblade",
+   "img": "Gingerblade.png",
+   "price": 0
+  },
+  {
+   "id": "Gingermint",
+   "name": "Gingermint",
+   "img": "Gingermint.png",
+   "price": 0
+  },
+  {
+   "id": "Green_Luger",
+   "name": "Green Luger",
+   "img": "Green_Luger.png",
+   "price": 0
+  },
+  {
+   "id": "Hallowgun",
+   "name": "Hallowgun",
+   "img": "Hallowgun.png",
+   "price": 0
+  },
+  {
+   "id": "Hallows_Blade",
+   "name": "Hallows Blade",
+   "img": "Hallows_Blade.png",
+   "price": 0
+  },
+  {
+   "id": "Hallows_Edge",
+   "name": "Hallows Edge",
+   "img": "Hallows_Edge.png",
+   "price": 0
+  },
+  {
+   "id": "Hallowscythe",
+   "name": "Hallowscythe",
+   "img": "Hallowscythe.png",
+   "price": 0
+  },
+  {
+   "id": "Handsaw",
+   "name": "Handsaw",
+   "img": "Handsaw.png",
+   "price": 0
+  },
+  {
+   "id": "Harvester",
+   "name": "Harvester",
+   "img": "Harvester.png",
+   "price": 30.99
+  },
+  {
+   "id": "Heart_Wand",
+   "name": "Heart Wand",
+   "img": "Heart_Wand.png",
+   "price": 38.99
+  },
+  {
+   "id": "Heartblade",
+   "name": "Heartblade",
+   "img": "Heartblade.png",
+   "price": 0
+  },
+  {
+   "id": "Heat",
+   "name": "Heat",
+   "img": "Heat.png",
+   "price": 0
+  },
+  {
+   "id": "Ice_Dragon",
+   "name": "Ice Dragon",
+   "img": "Ice_Dragon.png",
+   "price": 0
+  },
+  {
+   "id": "Ice_Shard",
+   "name": "Ice Shard",
+   "img": "Ice_Shard.png",
+   "price": 0
+  },
+  {
+   "id": "Icebeam",
+   "name": "Icebeam",
+   "img": "Icebeam.png",
+   "price": 0
+  },
+  {
+   "id": "Iceblaster",
+   "name": "Iceblaster",
+   "img": "Iceblaster.png",
+   "price": 0
+  },
+  {
+   "id": "Icebreaker",
+   "name": "Icebreaker",
+   "img": "Icebreaker.png",
+   "price": 8.99
+  },
+  {
+   "id": "Icecream",
+   "name": "Icecream",
+   "img": "Icecream.png",
+   "price": 16.49
+  },
+  {
+   "id": "Iceflake",
+   "name": "Iceflake",
+   "img": "Iceflake.png",
+   "price": 0
+  },
+  {
+   "id": "Icepiercer",
+   "name": "Icepiercer",
+   "img": "Icepiercer.png",
+   "price": 20.99
+  },
+  {
+   "id": "Icewing",
+   "name": "Icewing",
+   "img": "Icewing.png",
+   "price": 0
+  },
+  {
+   "id": "Jinglegun",
+   "name": "Jinglegun",
+   "img": "Jinglegun.png",
+   "price": 0
+  },
+  {
+   "id": "Laser",
+   "name": "Laser",
+   "img": "Laser.png",
+   "price": 0
+  },
+  {
+   "id": "Lightbringer",
+   "name": "Lightbringer",
+   "img": "Lightbringer.png",
+   "price": 0
+  },
+  {
+   "id": "Logchopper",
+   "name": "Logchopper",
+   "img": "Logchopper.png",
+   "price": 0
+  },
+  {
+   "id": "Luger",
+   "name": "Luger",
+   "img": "Luger.png",
+   "price": 0
+  },
+  {
+   "id": "Lugercane",
+   "name": "Lugercane",
+   "img": "Lugercane.png",
+   "price": 0
+  },
+  {
+   "id": "Makeshift",
+   "name": "Makeshift",
+   "img": "Makeshift.png",
+   "price": 0
+  },
+  {
+   "id": "Minty",
+   "name": "Minty",
+   "img": "Minty.png",
+   "price": 0
+  },
+  {
+   "id": "Nebula",
+   "name": "Nebula",
+   "img": "Nebula.png",
+   "price": 0
+  },
+  {
+   "id": "Nightblade",
+   "name": "Nightblade",
+   "img": "Nightblade.png",
+   "price": 0
+  },
+  {
+   "id": "Ocean",
+   "name": "Ocean",
+   "img": "Ocean.png",
+   "price": 0
+  },
+  {
+   "id": "Old_Glory",
+   "name": "Old Glory",
+   "img": "Old_Glory.png",
+   "price": 0
+  },
+  {
+   "id": "Orange_Seer",
+   "name": "Orange Seer",
+   "img": "Orange_Seer.png",
+   "price": 0
+  },
+  {
+   "id": "Ornament",
+   "name": "Ornament",
+   "img": "Ornament.png",
+   "price": 0
+  },
+  {
+   "id": "Pearl",
+   "name": "Pearl",
+   "img": "Pearl.png",
+   "price": 0
+  },
+  {
+   "id": "Pearlshine",
+   "name": "Pearlshine",
+   "img": "Pearlshine.png",
+   "price": 0
+  },
+  {
+   "id": "Peppermint",
+   "name": "Peppermint",
+   "img": "Peppermint.png",
+   "price": 0
+  },
+  {
+   "id": "Phantom",
+   "name": "Phantom",
+   "img": "Phantom.png",
+   "price": 0
+  },
+  {
+   "id": "Pixel",
+   "name": "Pixel",
+   "img": "Pixel.png",
+   "price": 0
+  },
+  {
+   "id": "Plasmabeam",
+   "name": "Plasmabeam",
+   "img": "Plasmabeam.png",
+   "price": 0
+  },
+  {
+   "id": "Plasmablade",
+   "name": "Plasmablade",
+   "img": "Plasmablade.png",
+   "price": 0
+  },
+  {
+   "id": "Prismatic",
+   "name": "Prismatic",
+   "img": "Prismatic.png",
+   "price": 0
+  },
+  {
+   "id": "Pumpking",
+   "name": "Pumpking",
+   "img": "Pumpking.png",
+   "price": 0
+  },
+  {
+   "id": "Purple_Seer",
+   "name": "Purple Seer",
+   "img": "Purple_Seer.png",
+   "price": 0
+  },
+  {
+   "id": "Rainbow_Gun",
+   "name": "Rainbow Gun",
+   "img": "Rainbow_Gun.png",
+   "price": 0
+  },
+  {
+   "id": "Rainbow_Knife",
+   "name": "Rainbow Knife",
+   "img": "Rainbow_Knife.png",
+   "price": 0
+  },
+  {
+   "id": "Raygun",
+   "name": "Raygun",
+   "img": "Raygun.png",
+   "price": 0
+  },
+  {
+   "id": "Red_Luger",
+   "name": "Red Luger",
+   "img": "Red_Luger.png",
+   "price": 0
+  },
+  {
+   "id": "Red_Seer",
+   "name": "Red Seer",
+   "img": "Red_Seer.png",
+   "price": 0
+  },
+  {
+   "id": "Sakura",
+   "name": "Sakura",
+   "img": "Sakura.png",
+   "price": 0
+  },
+  {
+   "id": "Sands",
+   "name": "Sands",
+   "img": "Sands.png",
+   "price": 0
+  },
+  {
+   "id": "Saw",
+   "name": "Saw",
+   "img": "Saw.png",
+   "price": 0
+  },
+  {
+   "id": "Seer",
+   "name": "Seer",
+   "img": "Seer.png",
+   "price": 0
+  },
+  {
+   "id": "Shark",
+   "name": "Shark",
+   "img": "Shark.png",
+   "price": 0
+  },
+  {
+   "id": "Slasher",
+   "name": "Slasher",
+   "img": "Slasher.png",
+   "price": 0
+  },
+  {
+   "id": "Snow_Dagger",
+   "name": "Snow Dagger",
+   "img": "Snow_Dagger.png",
+   "price": 0
+  },
+  {
+   "id": "Snowcannon",
+   "name": "Snowcannon",
+   "img": "Snowcannon.png",
+   "price": 0
+  },
+  {
+   "id": "Snowflake",
+   "name": "Snowflake",
+   "img": "Snowflake.png",
+   "price": 0
+  },
+  {
+   "id": "Snowstorm",
+   "name": "Snowstorm",
+   "img": "Snowstorm.png",
+   "price": 0
+  },
+  {
+   "id": "Soul",
+   "name": "Soul",
+   "img": "Soul.png",
+   "price": 0
+  },
+  {
+   "id": "Spectre",
+   "name": "Spectre",
+   "img": "Spectre.png",
+   "price": 0
+  },
+  {
+   "id": "Spider",
+   "name": "Spider",
+   "img": "Spider.png",
+   "price": 0
+  },
+  {
+   "id": "Spirit",
+   "name": "Spirit",
+   "img": "Spirit.png",
+   "price": 0
+  },
+  {
+   "id": "Sugar",
+   "name": "Sugar",
+   "img": "Sugar.png",
+   "price": 0
+  },
+  {
+   "id": "Sunrise",
+   "name": "Sunrise",
+   "img": "Sunrise.png",
+   "price": 0
+  },
+  {
+   "id": "Sunset",
+   "name": "Sunset",
+   "img": "Sunset.png",
+   "price": 0
+  },
+  {
+   "id": "Sweet",
+   "name": "Sweet",
+   "img": "Sweet.png",
+   "price": 0
+  },
+  {
+   "id": "Swirly_Axe",
+   "name": "Swirly Axe",
+   "img": "Swirly_Axe.png",
+   "price": 0
+  },
+  {
+   "id": "Swirly_Blade",
+   "name": "Swirly Blade",
+   "img": "Swirly_Blade.png",
+   "price": 0
+  },
+  {
+   "id": "Swirly_Gun",
+   "name": "Swirly Gun",
+   "img": "Swirly_Gun.png",
+   "price": 0
+  },
+  {
+   "id": "Tides",
+   "name": "Tides",
+   "img": "Tides.png",
+   "price": 0
+  },
+  {
+   "id": "Treat",
+   "name": "Treat",
+   "img": "Treat.png",
+   "price": 0
+  },
+  {
+   "id": "Turkey",
+   "name": "Turkey",
+   "img": "Turkey.png",
+   "price": 0
+  },
+  {
+   "id": "Vampires_Axe",
+   "name": "Vampires Axe",
+   "img": "Vampires_Axe.png",
+   "price": 0
+  },
+  {
+   "id": "Vampires_Edge",
+   "name": "Vampires Edge",
+   "img": "Vampires_Edge.png",
+   "price": 0
+  },
+  {
+   "id": "Vampires_Gun",
+   "name": "Vampires Gun",
+   "img": "Vampires_Gun.png",
+   "price": 0
+  },
+  {
+   "id": "Virtual",
+   "name": "Virtual",
+   "img": "Virtual.png",
+   "price": 0
+  },
+  {
+   "id": "Watergun",
+   "name": "Watergun",
+   "img": "Watergun.png",
+   "price": 0
+  },
+  {
+   "id": "Waves",
+   "name": "Waves",
+   "img": "Waves.png",
+   "price": 0
+  },
+  {
+   "id": "Winters_Edge",
+   "name": "Winters Edge",
+   "img": "Winters_Edge.png",
+   "price": 0
+  },
+  {
+   "id": "Xenoknife",
+   "name": "Xenoknife",
+   "img": "Xenoknife.png",
+   "price": 0
+  },
+  {
+   "id": "Xenoshot",
+   "name": "Xenoshot",
+   "img": "Xenoshot.png",
+   "price": 0
+  },
+  {
+   "id": "Xmas",
+   "name": "Xmas",
+   "img": "Xmas.png",
+   "price": 0
+  },
+  {
+   "id": "Yellow_Seer",
+   "name": "Yellow Seer",
+   "img": "Yellow_Seer.png",
+   "price": 0
+  }
+ ],
+ "sets": [
+  {
+   "name": "Sakura Set",
+   "icon": "Sakura",
+   "price": 200,
+   "items": []
+  },
+  {
+   "name": "Sweet Set",
+   "icon": "Sweet",
+   "price": 35.99,
+   "items": []
+  },
+  {
+   "name": "Candy Set",
+   "icon": "Candy",
+   "price": 17.49,
+   "items": []
+  },
+  {
+   "name": "Elderwood Set",
+   "icon": "Elderwood_Blade",
+   "price": 12.49,
+   "items": []
+  },
+  {
+   "name": "Full Swirly Set",
+   "icon": "Swirly_Blade",
+   "price": 11.49,
+   "items": []
+  },
+  {
+   "name": "Phantom Set",
+   "icon": "Phantom",
+   "price": 10.99,
+   "items": []
+  },
+  {
+   "name": "Seer Set 6x",
+   "icon": "Seer",
+   "price": 8.99,
+   "items": []
+  },
+  {
+   "name": "Hallow Set",
+   "icon": "Hallows_Blade",
+   "price": 8.69,
+   "items": []
+  },
+  {
+   "name": "Iceflake Set",
+   "icon": "Iceflake",
+   "price": 6.59,
+   "items": []
+  },
+  {
+   "name": "Eternalcane Set",
+   "icon": "Eternalcane",
+   "price": 5.79,
+   "items": []
+  },
+  {
+   "name": "Ginger Set",
+   "icon": "Gingerblade",
+   "price": 5.79,
+   "items": []
+  },
+  {
+   "name": "Plasma Set",
+   "icon": "Plasmablade",
+   "price": 5.79,
+   "items": []
+  },
+  {
+   "name": "Cookie Set",
+   "icon": "Cookieblade",
+   "price": 5.19,
+   "items": []
+  }
+ ]
+}

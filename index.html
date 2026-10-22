@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rosinha Shop 🌸 Tabela de Itens</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffe9f2;--card:#fff;--card2:#fff4f9;--pk:#ff8fbd;--pk2:#ff5fa2;--pk3:#ffc8de;--tx:#6b2a49;--tx2:#a8647f;--sh:0 8px 24px #ff5fa233;--r:22px}
+[data-theme=dark]{--bg:#2a1422;--card:#3a1c2f;--card2:#46233a;--pk:#e0699f;--pk2:#ff7eb6;--pk3:#6d2f52;--tx:#ffe3ef;--tx2:#d9a0bb;--sh:0 8px 24px #0006}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,sans-serif;font-weight:600;color:var(--tx);background:var(--bg);min-height:100vh;transition:background .5s,color .5s;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:var(--g) top/cover;opacity:.55;z-index:-1;animation:drift 30s linear infinite alternate}
+[data-theme=dark] body::before{opacity:.07}
+@keyframes drift{to{background-position:bottom}}
+h1,h2,h3,button,.tab{font-family:Fredoka,sans-serif}
+.pix{image-rendering:pixelated}
+header{display:flex;align-items:center;gap:14px;padding:14px 22px;background:linear-gradient(90deg,var(--pk3),var(--card));box-shadow:var(--sh);position:sticky;top:0;z-index:20;flex-wrap:wrap;border-radius:0 0 28px 28px}
+header img.logo{width:52px;animation:wob 2.4s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(12deg) scale(1.12)}}
+h1{margin:0;font-size:1.7rem;color:var(--pk2)}
+nav{display:flex;gap:8px;margin-left:auto;flex-wrap:wrap}
+.tab,.btn{border:0;border-radius:99px;padding:10px 20px;font-size:1rem;cursor:pointer;background:var(--card);color:var(--tx);box-shadow:0 3px 0 var(--pk3);transition:transform .2s cubic-bezier(.3,2,.5,1),box-shadow .2s,background .3s;position:relative;overflow:hidden}
+.tab:hover,.btn:hover{transform:translateY(-3px) scale(1.06)}
+.tab:active,.btn:active{transform:scale(.92)}
+.tab.on,.btn.pri{background:linear-gradient(135deg,var(--pk),var(--pk2));color:#fff;box-shadow:0 4px 0 #d83c85}
+.btn.sm{padding:5px 12px;font-size:.85rem}
+.rip{position:absolute;border-radius:50%;background:#fff9;transform:scale(0);animation:rp .6s forwards;pointer-events:none}
+@keyframes rp{to{transform:scale(4);opacity:0}}
+main{max-width:1250px;margin:22px auto;padding:0 16px}
+section.pg{display:none}section.pg.on{display:block;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{opacity:0;transform:translateY(25px) scale(.96)}}
+.grid2{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:var(--r);padding:18px;box-shadow:var(--sh);border:3px dashed var(--pk3);transition:transform .3s}
+.card:hover{transform:translateY(-2px)}
+.card h2{margin:0 0 10px;color:var(--pk2)}
+.bar{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+input,select{font:inherit;padding:9px 14px;border-radius:99px;border:2px solid var(--pk3);background:var(--card2);color:var(--tx);outline:0;transition:border .2s,transform .2s,box-shadow .2s}
+input:focus,select:focus{border-color:var(--pk2);transform:scale(1.03);box-shadow:0 0 0 4px #ff5fa233}
+input.s{flex:1;min-width:140px}
+.pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;max-height:520px;overflow:auto;padding:6px}
+.it{background:var(--card2);border-radius:16px;padding:8px 4px;text-align:center;cursor:pointer;font-size:.78rem;border:2px solid transparent;transition:transform .25s cubic-bezier(.3,2,.5,1),border .2s,box-shadow .2s;animation:pop .4s backwards}
+.it:hover{transform:translateY(-5px) rotate(-3deg) scale(1.08);border-color:var(--pk);box-shadow:var(--sh)}
+.it:active{transform:scale(.85)}
+.it.sel{border-color:var(--pk2);background:var(--pk3)}
+.it img{width:62px;height:62px;object-fit:contain;display:block;margin:auto;transition:transform .3s}
+.it:hover img{transform:scale(1.15) rotate(6deg)}
+.it b{display:block;color:var(--pk2)}
+.row{display:flex;align-items:center;gap:10px;background:var(--card2);border-radius:16px;padding:6px 10px;margin:6px 0;animation:pop .35s backwards}
+.row img{width:42px;height:42px;object-fit:contain}.row .nm{flex:1}
+.row input{width:80px;padding:4px 8px}
+.empty{text-align:center;color:var(--tx2);padding:24px}.empty img{width:90px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.edit{text-align:center}.edit img.big{width:130px;animation:bob 2.5s infinite}
+.edit input.pr{font-size:1.5rem;width:170px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chip{background:var(--pk3);border-radius:99px;padding:3px 10px 3px 4px;display:flex;align-items:center;gap:4px;cursor:pointer;animation:pop .3s;font-size:.8rem}.chip img{width:26px}
+.chip:hover{background:var(--pk);color:#fff}
+.tabs2{display:inline-flex;background:var(--card2);border-radius:99px;padding:3px;margin-bottom:8px}
+.tabs2 button{border:0;background:0;padding:6px 14px;border-radius:99px;cursor:pointer;color:var(--tx);transition:.25s}
+.tabs2 button.on{background:var(--pk2);color:#fff;transform:scale(1.07)}
+.prog{height:14px;border-radius:99px;background:var(--pk3);overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pk),var(--pk2));transition:width .3s}
+.heart{position:fixed;pointer-events:none;z-index:99;font-size:20px;animation:fly 1s forwards}
+@keyframes fly{to{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.3);opacity:0}}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,100px);background:var(--pk2);color:#fff;padding:12px 24px;border-radius:99px;box-shadow:var(--sh);transition:transform .5s cubic-bezier(.3,2,.5,1);z-index:100;font-family:Fredoka}
+.toast.on{transform:translate(-50%,0)}
+.deco{position:fixed;width:90px;opacity:.9;z-index:-1;animation:bob 4s ease-in-out infinite}
+.total{font-family:Fredoka;font-size:1.1rem;color:var(--pk2);text-align:right}
+</style>
+</head>
+<body>
+<header>
+ <img class="logo pix" id="logo"><h1>Rosinha Shop</h1>
+ <nav>
+  <button class="tab on" data-p="p1">💰 Preços</button>
+  <button class="tab" data-p="p2">🎀 Criar Sets</button>
+  <button class="tab" data-p="p3">📋 Tabela</button>
+  <button class="tab" data-p="p4" id="acc">👤 Entrar</button>
+  <button class="tab" data-p="p5" id="admtab" style="display:none">🛠️ Admin</button>
+  <button class="tab" id="theme">🌙</button>
+ </nav>
+</header>
+<img class="deco pix" id="d1" style="left:10px;bottom:20px"><img class="deco pix" id="d2" style="right:10px;bottom:60px;animation-delay:1s"><img class="deco pix" id="d3" style="right:14px;top:120px;animation-delay:2s;width:70px">
+<main>
+<section class="pg on" id="p1"><div class="grid2">
+ <div class="card"><h2>🔎 Escolha o item</h2><div class="tabs2" id="k1"><button class="on" data-k="item">Itens</button><button data-k="set">Sets</button></div><div id="pk1"></div></div>
+ <div class="card edit" id="ed"><h2>✏️ Editar preço</h2><div class="empty"><img class="pix" data-art="bunny"><br>Escolha um item ao lado!</div></div>
+</div></section>
+
+<section class="pg" id="p2"><div class="grid2">
+ <div class="card"><h2>🎀 Selecione os itens do set</h2><div id="pk2"></div></div>
+ <div>
+  <div class="card"><h2>✨ Novo set</h2>
+   <div class="bar"><input class="s" id="sn" placeholder="Nome do set (ex: Sweet Set)"><input id="sp" type="number" step="0.01" placeholder="Preço R$" style="width:110px"></div>
+   <div class="chips" id="sc"></div>
+   <button class="btn pri" id="sv">💖 Criar set</button>
+  </div>
+  <div class="card" style="margin-top:16px"><h2>📦 Meus sets</h2><div id="sl"></div></div>
+ </div>
+</div></section>
+
+<section class="pg" id="p3"><div class="grid2">
+ <div class="card"><h2>➕ Adicionar ao inventário</h2><div class="tabs2" id="k3"><button class="on" data-k="item">Itens</button><button data-k="set">Sets</button></div><div id="pk3"></div>
+  <div class="card" style="margin-top:14px;border-style:solid"><h2>🎥 Ler vídeo do inventário</h2>
+   <p style="margin:0 0 8px;font-size:.9rem">O vídeo é analisado aqui mesmo no navegador (leitura dos nomes na tela, sem enviar nada pra internet).</p>
+   <input type="file" id="vf" accept="video/*"> <button class="btn pri sm" id="va">🔍 Analisar</button>
+   <div class="prog"><i id="vp"></i></div><div id="vs" style="font-size:.85rem"></div><div id="vr"></div>
+  </div>
+ </div>
+ <div class="card"><h2>🌸 Minha tabela</h2>
+  <div class="bar"><input class="s" id="tt" value="Loja da Rosinha"><select id="ts"><option value="pd">Maior → menor preço</option><option value="pa">Menor → maior preço</option><option value="na">A → Z</option><option value="nd">Z → A</option></select></div>
+  <div id="inv"></div><div class="total" id="tot"></div>
+  <div class="bar" style="margin-top:10px"><label>Formato:</label><select id="imgFormat"><option value="wide">Paisagem (16:9)</option><option value="square">Quadrada (1:1)</option><option value="portrait">Vertical (4:5)</option><option value="compact">Compacta</option><option value="readable">Grande / legível</option></select><label for="itemsPerPage">Itens por página:</label><input id="itemsPerPage" type="number" min="1" max="40" value="8" style="width:76px;padding:8px;border-radius:10px;border:1px solid #e8a8c6;background:var(--card,#fff);color:inherit"><button class="btn" id="previewImages">👁️ Pré-visualizar</button><button class="btn pri" id="dl">📥 Baixar todas</button><button class="btn" id="clr">🧹 Limpar</button><button class="btn" id="xs">🗄️ Exportar SQL</button></div><div id="imagePreview" style="display:none;margin-top:16px;width:100%"><h3 style="margin:8px 0">Pré-visualização das páginas</h3><p id="previewInfo" style="font-size:13px;opacity:.8"></p><div id="previewPages" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px"></div></div>
+ </div>
+</div></section>
+<section class="pg" id="p4"><div class="grid2">
+ <div class="card" id="authbox"></div>
+ <div class="card"><h2>ℹ️ Como funciona</h2>
+  <p>Todo mundo vê o <b>catálogo oficial</b> de itens e sets. Você pode mudar preços, criar seus próprios sets e montar sua tabela sem alterar o catálogo dos outros.</p>
+  <p>Com uma <b>conta</b> (nome + senha) tudo fica salvo no servidor: é só entrar com o mesmo nome e senha em qualquer computador ou celular. Sem conta, seus dados ficam apenas neste navegador.</p>
+ </div>
+</div></section>
+
+<section class="pg" id="p5"><div class="grid2">
+ <div>
+  <div class="card"><h2>🗡️ Novo item (faca/arma)</h2>
+   <div class="bar"><input class="s" id="an" placeholder="Nome do item" maxlength="60"><input id="ap1" type="number" step="0.01" min="0" placeholder="Preço R$" style="width:110px"></div>
+   <div class="bar"><input type="file" id="af" accept="image/png,image/jpeg,image/webp,image/gif"></div>
+   <div class="edit"><img class="big pix" id="apv" style="display:none"></div>
+   <button class="btn pri" id="aadd">➕ Adicionar ao catálogo</button>
+  </div>
+  <div class="card" style="margin-top:16px"><h2>🎀 Novo set oficial</h2>
+   <div class="bar"><input class="s" id="asn" placeholder="Nome do set" maxlength="60"><input id="asp" type="number" step="0.01" min="0" placeholder="Preço R$" style="width:110px"></div>
+   <div id="pkA"></div><div class="chips" id="asc"></div>
+   <button class="btn pri" id="asv">💖 Criar set oficial</button>
+  </div>
+ </div>
+ <div class="card"><h2>📚 Catálogo oficial</h2>
+  <div class="bar"><input class="s" id="aq" placeholder="🔎 Pesquisar..."></div>
+  <div id="acat" style="max-height:700px;overflow:auto"></div>
+ </div>
+</div></section>
+</main>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script><script src="data.js"></script><script src="matcher.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const money=n=>'R$ '+(+n||0).toFixed(2).replace('.',',');
+const esc=s=>String(s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]));
+// ---------- arte ----------
+$('#logo').src=ART.bow;$('#d1').src=ART.bunny;$('#d2').src=ART.paw;$('#d3').src=ART.lotus;
+document.documentElement.style.setProperty('--g',`url(${ART.gingham})`);
+$$('[data-art]').forEach(i=>i.src=ART[i.dataset.art]);
+let ITEMS=[],GSETS=[];const IMG={};
+// ---------- efeitos ----------
+function burst(x,y,n=10,em=['💖','🌸','✨','🎀']){for(let i=0;i<n;i++){const h=document.createElement('div');h.className='heart';h.textContent=em[i%em.length];h.style.left=x+'px';h.style.top=y+'px';h.style.setProperty('--dx',(Math.random()-.5)*220+'px');h.style.setProperty('--dy',-60-Math.random()*160+'px');h.style.setProperty('--rot',(Math.random()-.5)*200+'deg');document.body.appendChild(h);setTimeout(()=>h.remove(),1000)}}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2200)}
+document.addEventListener('click',e=>{burst(e.clientX,e.clientY,4,['💗','✨']);const b=e.target.closest('.btn,.tab');if(b){const r=document.createElement('span'),d=b.getBoundingClientRect();r.className='rip';r.style.cssText=`width:40px;height:40px;left:${e.clientX-d.left-20}px;top:${e.clientY-d.top-20}px`;b.appendChild(r);setTimeout(()=>r.remove(),600)}});
+let lt=0;document.addEventListener('mousemove',e=>{if(Date.now()-lt<90)return;lt=Date.now();burst(e.clientX,e.clientY,1,['✨','🌸'])});
+// ---------- tema / abas ----------
+$('#theme').onclick=()=>{const d=document.documentElement;d.dataset.theme=d.dataset.theme=='dark'?'light':'dark';$('#theme').textContent=d.dataset.theme=='dark'?'☀️':'🌙';localStorage.th=d.dataset.theme};
+if(localStorage.th=='dark')$('#theme').click();
+$$('.tab[data-p]').forEach(b=>b.onclick=()=>{$$('.tab[data-p]').forEach(x=>x.classList.toggle('on',x==b));$$('.pg').forEach(p=>p.classList.toggle('on',p.id==b.dataset.p));render()});
+// ---------- dados: catálogo oficial (servidor) + dados pessoais (conta ou navegador) ----------
+const TOK='rosaTok';let USER=null;
+const blankDB=()=>({price:{},gprice:{},sets:[],inv:{},next:1});
+let DB=blankDB();
+function normDB(o){const d=blankDB();if(!o||typeof o!='object')return d;
+ for(const k of['price','gprice'])if(o[k]&&typeof o[k]=='object')for(const id in o[k]){const v=+o[k][id];if(isFinite(v)&&v>=0)d[k][id]=v}
+ if(Array.isArray(o.sets))o.sets.forEach(s=>{const id=Math.floor(+(s&&s.id));if(id>0&&s.name&&!d.sets.some(x=>x.id==id))d.sets.push({id,name:String(s.name).slice(0,60),icon:String(s.icon||''),price:+s.price||0,items:Array.isArray(s.items)?s.items.map(String):[]})});
+ if(o.inv&&typeof o.inv=='object')for(const k in o.inv){const q=Math.floor(+o.inv[k]);if(/^(item|set)\|.+/.test(k)&&q>0)d.inv[k]=q}
+ d.next=Math.max(Math.floor(+o.next)||1,1,...d.sets.map(s=>s.id+1));return d}
+// dados antigos (versão sem servidor) viram preços/sets pessoais, sem perder nada
+function migrateOld(o){if(!o||typeof o!='object')return null;const n=blankDB(),gmap={};
+ (o.sets||[]).forEach(s=>{const g=GSETS.find(x=>x.name===s.name&&!(s.items&&s.items.length));if(g&&+s.id<=13){gmap[s.id]=g.id;if(+s.price!==g.price)n.gprice[g.id]=+s.price||0}else n.sets.push(s)});
+ for(const id in o.price||{}){const it=ITEMS.find(i=>i.id==id);if(it&&+o.price[id]!==it.price)n.price[id]=+o.price[id]}
+ for(const k in o.inv||{}){const[a,b]=k.split('|');n.inv[a=='set'&&gmap[b]?'set|'+gmap[b]:k]=o.inv[k]}
+ n.next=o.next;return n}
+function loadGuest(){let o=null;try{o=JSON.parse(localStorage.rosaDB3||'null')}catch(e){}
+ if(!o){try{o=migrateOld(JSON.parse(localStorage.rosaDB2||'null'))}catch(e){}}
+ return normDB(o)}
+async function api(m,p,b){const h={};if(b!==undefined)h['Content-Type']='application/json';const t=localStorage.getItem(TOK);if(t)h.Authorization='Bearer '+t;
+ let r;try{r=await fetch(p,{method:m,headers:h,body:b===undefined?undefined:JSON.stringify(b)})}catch(e){const x=Error('Sem conexão com o servidor.');x.status=0;throw x}
+ let j={};try{j=await r.json()}catch(e){}
+ if(!r.ok){const x=Error(j.error||'Erro '+r.status);x.status=r.status;throw x}return j}
+async function loadCatalog(){const c=await api('GET','/api/catalog');ITEMS=c.items;GSETS=c.sets;for(const k in IMG)delete IMG[k];ITEMS.forEach(i=>IMG[i.id]=i.img)}
+let saveT=null,dirty=false,syncFail=0;
+function save(){if(!USER){try{localStorage.rosaDB3=JSON.stringify(DB)}catch(e){toast('Armazenamento cheio: não foi possível salvar.')}return}
+ dirty=true;clearTimeout(saveT);saveT=setTimeout(push,500)}
+async function push(){if(!USER||!dirty)return;dirty=false;
+ try{await api('PUT','/api/state',{state:DB});syncFail=0}
+ catch(e){if(e.status==401){forceLogout('Sessão expirada. Entre novamente.');return}dirty=true;if(!syncFail++)toast('Sem conexão: vou tentar salvar de novo…');clearTimeout(saveT);saveT=setTimeout(push,4000)}}
+addEventListener('pagehide',()=>{if(USER&&dirty){try{fetch('/api/state',{method:'PUT',keepalive:true,headers:{'Content-Type':'application/json',Authorization:'Bearer '+localStorage.getItem(TOK)},body:JSON.stringify({state:DB})})}catch(e){}}});
+const iprice=i=>DB.price[i.id]!=null?DB.price[i.id]:i.price;
+const sprice=s=>DB.gprice[s.id]!=null?DB.gprice[s.id]:s.price;
+const ents=kind=>kind=='set'?GSETS.map(s=>({ref:s.id,name:s.name,price:sprice(s),icon:s.icon,kind:'set',own:false})).concat(DB.sets.map(s=>({ref:s.id,name:s.name,price:s.price,icon:s.icon,kind:'set',own:true}))):ITEMS.map(i=>({ref:i.id,name:i.name,price:iprice(i),icon:i.id,kind:'item'}));
+function exportSQL(){const a=document.createElement('a'),e=x=>"'"+String(x).replace(/'/g,"''")+"'";let t='CREATE TABLE items(id TEXT PRIMARY KEY,name TEXT,price REAL);\nCREATE TABLE sets(id TEXT PRIMARY KEY,name TEXT,icon TEXT,price REAL);\nCREATE TABLE set_items(set_id TEXT,item_id TEXT);\nCREATE TABLE inventory(kind TEXT,ref TEXT,qty INTEGER);\n';
+ ents('item').forEach(i=>t+=`INSERT INTO items VALUES(${e(i.ref)},${e(i.name)},${i.price});\n`);
+ GSETS.forEach(x=>{t+=`INSERT INTO sets VALUES(${e(x.id)},${e(x.name)},${e(x.icon)},${sprice(x)});\n`;x.items.forEach(i=>t+=`INSERT INTO set_items VALUES(${e(x.id)},${e(i)});\n`)});
+ DB.sets.forEach(x=>{t+=`INSERT INTO sets VALUES(${e(x.id)},${e(x.name)},${e(x.icon)},${x.price});\n`;x.items.forEach(i=>t+=`INSERT INTO set_items VALUES(${e(x.id)},${e(i)});\n`)});
+ for(const k in DB.inv){const[p,q]=k.split('|');t+=`INSERT INTO inventory VALUES(${e(p)},${e(q)},${DB.inv[k]});\n`}
+ a.href=URL.createObjectURL(new Blob([t]));a.download='rosinha.sql';a.click()}
+const SORT={pd:(a,b)=>b.price-a.price||a.name.localeCompare(b.name),pa:(a,b)=>a.price-b.price||a.name.localeCompare(b.name),na:(a,b)=>a.name.localeCompare(b.name),nd:(a,b)=>b.name.localeCompare(a.name)};
+// ---------- seletor reutilizável ----------
+function picker(box,getKind,onPick,isSel=()=>false){
+ box.innerHTML=`<div class="bar"><input class="s" placeholder="🔎 Pesquisar pelo nome..."><select><option value="pd">Maior → menor preço</option><option value="pa">Menor → maior preço</option><option value="na">A → Z</option><option value="nd">Z → A</option></select></div><div class="pick"></div>`;
+ const [inp,sel,g]=[box.querySelector('input'),box.querySelector('select'),box.querySelector('.pick')];
+ const draw=()=>{const t=inp.value.toLowerCase();g.innerHTML='';ents(getKind()).filter(e=>e.name.toLowerCase().includes(t)).sort(SORT[sel.value]).forEach((e,i)=>{const d=document.createElement('div');d.className='it'+(isSel(e)?' sel':'');d.style.animationDelay=Math.min(i,20)*15+'ms';d.innerHTML=`<img src="${IMG[e.icon]||ART.paw}">${esc(e.name)}<b>${money(e.price)}</b>`;d.onclick=ev=>{onPick(e);draw()};g.appendChild(d)})};
+ inp.oninput=sel.onchange=draw;box.draw=draw;draw();
+}
+function kindTabs(el,cb){el.querySelectorAll('button').forEach(b=>b.onclick=()=>{el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x==b));el.dataset.k=b.dataset.k;cb()})}
+// ---------- aba 1: preços ----------
+let cur=null;$('#k1').dataset.k='item';
+function renderEdit(){const ed=$('#ed');if(!cur)return;ed.innerHTML=`<h2>✏️ Editar preço</h2><img class="big pix" src="${IMG[cur.icon]||ART.paw}"><h3>${esc(cur.name)}</h3><input class="pr" id="np" type="number" step="0.01" value="${cur.price}"><br><br><button class="btn pri" id="sp1">💾 Salvar preço</button>${hasOv(cur)?' <button class="btn" id="sp0">↩️ Preço oficial</button>':''}`;
+ $('#sp1').onclick=e=>{const v=+$('#np').value||0;setPrice(cur,v);cur.price=v;burst(e.clientX,e.clientY,16);toast('Preço salvo! 💖');renderEdit();$('#pk1').draw()};
+ const z=$('#sp0');if(z)z.onclick=()=>{const o=officialPrice(cur);if(cur.kind=='item')delete DB.price[cur.ref];else delete DB.gprice[cur.ref];save();cur.price=o;toast('Voltou ao preço oficial 🌸');renderEdit();$('#pk1').draw()};$('#np').focus()}
+const isG=e=>String(e.ref)[0]=='g';
+const hasOv=e=>e.kind=='item'?DB.price[e.ref]!=null:(isG(e)&&DB.gprice[e.ref]!=null);
+const officialPrice=e=>e.kind=='item'?(ITEMS.find(i=>i.id==e.ref)||{}).price||0:(GSETS.find(s=>s.id==e.ref)||{}).price||0;
+function setPrice(e,v){if(e.kind=='item')DB.price[e.ref]=v;else if(isG(e))DB.gprice[e.ref]=v;else DB.sets.find(s=>s.id==e.ref).price=v;save()}
+function mk1(){picker($('#pk1'),()=>$('#k1').dataset.k,e=>{cur=e;renderEdit()},e=>cur&&cur.ref==e.ref&&cur.kind==e.kind)}
+kindTabs($('#k1'),mk1);
+// ---------- aba 2: sets ----------
+let chosen=[];
+function mk2(){picker($('#pk2'),()=>'item',e=>{const i=chosen.indexOf(e.ref);i<0?chosen.push(e.ref):chosen.splice(i,1);chips()},e=>chosen.includes(e.ref))}
+function chips(){$('#sc').innerHTML=chosen.length?'':'<span class="empty" style="padding:0">Nenhum item selecionado</span>';chosen.forEach(id=>{const c=document.createElement('span');c.className='chip';c.innerHTML=`<img src="${IMG[id]}">${id.replace(/_/g,' ')} ✕`;c.onclick=()=>{chosen=chosen.filter(x=>x!=id);chips();$('#pk2').draw()};$('#sc').appendChild(c)})}
+$('#sv').onclick=e=>{const n=$('#sn').value.trim();if(!n||!chosen.length)return toast('Dê um nome e escolha itens 🎀');DB.sets.push({id:Number(DB.next++),name:n,icon:chosen[0],price:+$('#sp').value||0,items:[...chosen]});save();chosen=[];$('#sn').value=$('#sp').value='';chips();render();burst(e.clientX,e.clientY,24);toast('Set criado! 🎀')};
+function setList(){const l=$('#sl');l.innerHTML='';ents('set').sort((a,b)=>b.price-a.price).forEach(s=>{const r=document.createElement('div');r.className='row';r.innerHTML=`<img class="pix" src="${IMG[s.icon]||ART.paw}"><span class="nm">${esc(s.name)}<br><small>${money(s.price)}${s.own?'':' · oficial'}</small></span>${s.own?'<button class="btn sm">🗑</button>':''}`;const bt=r.querySelector('button');if(bt)bt.onclick=()=>{DB.sets=DB.sets.filter(x=>x.id!=s.ref);delete DB.inv['set|'+s.ref];save();render()};l.appendChild(r)})}
+// ---------- aba 3: inventário ----------
+$('#k3').dataset.k='item';
+const invAdd=(kind,ref,n=1)=>{const k=kind+'|'+ref;DB.inv[k]=(DB.inv[k]||0)+n;if(DB.inv[k]<=0)delete DB.inv[k];save();drawInv()};
+function mk3(){picker($('#pk3'),()=>$('#k3').dataset.k,e=>{invAdd(e.kind,e.ref);toast('+1 '+e.name)})}
+kindTabs($('#k3'),mk3);
+function invRows(){const m={};ents('item').concat(ents('set')).forEach(e=>m[e.kind+e.ref]=e);return Object.entries(DB.inv).map(([k,qty])=>{const[a,b]=k.split('|');return{...m[a+(a==='set'?String(b):b)],qty}}).filter(r=>r.name).sort(SORT[$('#ts').value])}
+function drawInv(){const l=$('#inv');l.innerHTML='';const rows=invRows();if(!rows.length)l.innerHTML='<div class="empty"><img class="pix" src="'+ART.bunny+'"><br>Sua tabela está vazia</div>';let tot=0;
+ rows.forEach(r=>{tot+=r.qty*r.price;const d=document.createElement('div');d.className='row';d.innerHTML=`<img class="pix" src="${IMG[r.icon]||ART.paw}"><span class="nm">${esc(r.name)}<br><small>${money(r.price)}</small></span><button class="btn sm">−</button><b>${r.qty}</b><button class="btn sm">+</button>`;const [m,p]=d.querySelectorAll('button');m.onclick=()=>invAdd(r.kind,r.ref,-1);p.onclick=()=>invAdd(r.kind,r.ref,1);l.appendChild(d)});
+ $('#tot').textContent=rows.length?'Valor total: '+money(tot):''}
+$('#ts').onchange=drawInv;
+$('#xs').onclick=exportSQL;$('#clr').onclick=()=>{DB.inv={};save();drawInv();toast('Tabela limpa 🧹')};
+// ---------- imagem da tabela ----------
+const loadImg=src=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=src});
+// ---------- imagem da tabela: prévia, itens por página e download em ZIP ----------
+let generatedImagePages=[];
+async function buildInventoryPages(){
+ const rows=invRows();if(!rows.length){toast('Adicione itens primeiro 🌸');return []}
+ const fmt=$('#imgFormat').value;
+ const formats={wide:{w:1600,h:900,cols:2},square:{w:1200,h:1200,cols:2},portrait:{w:1080,h:1350,cols:2},compact:{w:1500,h:1000,cols:2},readable:{w:1200,h:1800,cols:2}};
+ const cfg=formats[fmt]||formats.wide;
+ const perPage=Math.max(1,Math.min(40,parseInt($('#itemsPerPage').value,10)||8));
+ $('#itemsPerPage').value=perPage;
+ const pages=[];for(let i=0;i<rows.length;i+=perPage)pages.push(rows.slice(i,i+perPage));
+ const load=src=>new Promise(resolve=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>resolve(null);im.src=src});
+ const dark=document.documentElement.dataset.theme==='dark',output=[];
+ for(let pi=0;pi<pages.length;pi++){
+  const page=pages[pi],W=cfg.w,H=cfg.h,pad=Math.round(W*.045),top=Math.round(H*.15),bottom=Math.round(H*.06);
+  const c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+  const gr=x.createLinearGradient(0,0,0,H);gr.addColorStop(0,dark?'#3a1c2f':'#ffd3e5');gr.addColorStop(1,dark?'#2a1422':'#fff4f9');x.fillStyle=gr;x.fillRect(0,0,W,H);
+  x.textBaseline='middle';x.textAlign='center';x.font=`600 ${Math.round(W*.04)}px Fredoka,sans-serif`;x.fillStyle=dark?'#ffb6d5':'#ff5fa2';x.fillText($('#tt').value||'Tabela',W/2,H*.055);
+  x.font=`600 ${Math.round(W*.019)}px Nunito,sans-serif`;x.fillStyle=dark?'#ffe3ef':'#6b2a49';x.fillText(pages.length>1?`Inventário • Página ${pi+1} de ${pages.length}`:'Inventário • Rosinha Shop',W/2,H*.105);
+  const cols=Math.min(cfg.cols,page.length),gap=Math.round(W*.025),colW=(W-pad*2-gap*(cols-1))/cols,rowsPerCol=Math.ceil(page.length/cols),usableH=H-top-bottom,rowH=Math.floor(usableH/Math.max(1,rowsPerCol)),cardH=Math.min(rowH-12,Math.round(H*.17)),imageSize=Math.min(Math.round(cardH*.72),Math.round(colW*.24)),fontSize=Math.max(18,Math.min(Math.round(cardH*.22),Math.round(W*.027)));
+  for(let i=0;i<page.length;i++){
+   const r=page[i],col=Math.floor(i/rowsPerCol),row=i%rowsPerCol,xx=pad+col*(colW+gap),yy=top+row*rowH;
+   x.fillStyle=dark?'#46233aee':'#ffffffed';x.beginPath();x.roundRect(xx,yy,colW,cardH,Math.round(cardH*.12));x.fill();
+   const im=await load(IMG[r.icon]||ART.paw);if(im){const ix=xx+Math.round(colW*.035),iy=yy+(cardH-imageSize)/2;x.drawImage(im,ix,iy,imageSize,imageSize)}
+   const priceW=Math.min(colW*.29,150),textX=xx+imageSize+Math.round(colW*.075),maxW=colW-(textX-xx)-priceW-Math.round(colW*.05);
+   x.textAlign='left';x.font=`600 ${fontSize}px Fredoka,sans-serif`;x.fillStyle=dark?'#ffe3ef':'#6b2a49';let name=`${r.qty}x ${r.name}`;while(name.length>4&&x.measureText(name).width>maxW)name=name.slice(0,-2)+'…';x.fillText(name,textX,yy+cardH*.43);
+   x.font=`600 ${Math.max(16,fontSize*.88)}px Nunito,sans-serif`;x.fillStyle=dark?'#ff9cc8':'#d83c85';x.fillText('Valor',textX,yy+cardH*.72);
+   x.textAlign='right';x.font=`700 ${Math.max(17,fontSize)}px Fredoka,sans-serif`;x.fillText(money(r.price),xx+colW-Math.round(colW*.04),yy+cardH*.55);
+  }
+  x.textAlign='center';x.font=`500 ${Math.max(14,Math.round(W*.012))}px Nunito,sans-serif`;x.fillStyle=dark?'#e9bbd1':'#8e5570';x.fillText('Rosinha Shop 🌸',W/2,H-Math.round(H*.025));
+  output.push({blob:await new Promise(resolve=>c.toBlob(resolve,'image/png')),url:c.toDataURL('image/png'),index:pi+1});
+ }
+ generatedImagePages=output;
+ const wrap=$('#imagePreview'),grid=$('#previewPages');grid.innerHTML='';
+ output.forEach(p=>{const card=document.createElement('div');card.style.cssText='border:1px solid #e7b5cc;border-radius:12px;padding:10px;min-width:0';const img=document.createElement('img');img.src=p.url;img.alt=`Prévia página ${p.index}`;img.style.cssText='width:100%;height:auto;display:block;border-radius:8px';const label=document.createElement('div');label.style.cssText='padding:8px 2px 0;font-weight:600';label.textContent=`Página ${p.index} de ${output.length}`;card.append(img,label);grid.append(card)});
+ $('#previewInfo').textContent=`${rows.length} itens • ${perPage} itens por página • ${output.length} imagem(ns) serão incluídas no download.`;
+ wrap.style.display='block';return output;
+}
+$('#previewImages').onclick=async()=>{const b=$('#previewImages');b.disabled=true;b.textContent='Gerando prévia…';try{await buildInventoryPages()}catch(e){console.error(e);toast('Não foi possível gerar a prévia.')}finally{b.disabled=false;b.textContent='👁️ Pré-visualizar'}};
+$('#dl').onclick=async()=>{
+ try{
+  const pages=generatedImagePages.length?generatedImagePages:await buildInventoryPages();if(!pages.length)return;
+  if(!window.JSZip){toast('Não foi possível carregar o compactador. Tente atualizar a página.');return}
+  const zip=new JSZip();pages.forEach(p=>zip.file(`tabela-rosinha-pagina-${String(p.index).padStart(2,'0')}.png`,p.blob));
+  const blob=await zip.generateAsync({type:'blob'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='tabela-rosinha-todas-as-paginas.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+  toast(`Todas as ${pages.length} imagens foram reunidas em um ZIP! 💖`);
+ }catch(e){console.error(e);toast('Erro ao preparar as imagens para baixar.')}
+};
+$('#imgFormat').addEventListener('change',()=>{generatedImagePages=[]});
+$('#itemsPerPage').addEventListener('change',()=>{generatedImagePages=[]});
+ // ---------- vídeo → itens e sets ----------
+ const candList=()=>ents('item').concat(ents('set')).map(e=>({kind:e.kind,ref:String(e.ref),name:e.name}));
+ $('#va').onclick=async()=>{const f=$('#vf').files[0];if(!f)return toast('Escolha o vídeo primeiro 🎥');const btn=$('#va');btn.disabled=true;let worker=null,url=null;$('#vr').innerHTML='';$('#vp').style.width='0';
+ try{const index=Matcher.buildIndex(candList());if(!index.length)throw Error('O catálogo ainda não carregou. Atualize a página.');
+  const v=document.createElement('video');v.muted=true;v.playsInline=true;v.preload='auto';url=URL.createObjectURL(f);v.src=url;await new Promise((r,j)=>{v.onloadedmetadata=r;v.onerror=()=>j(Error('Não consegui abrir o vídeo.'))});
+  if(!isFinite(v.duration)||!v.videoWidth)throw Error('Não consegui ler a imagem deste vídeo.');
+  $('#vs').textContent='Carregando leitor de texto (precisa de internet)...';if(!window.Tesseract)await new Promise((ok,no)=>{const sc=document.createElement('script');sc.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';sc.onload=ok;sc.onerror=()=>no(Error('Sem internet para carregar o leitor.'));document.head.appendChild(sc)});
+  worker=await Tesseract.createWorker('eng');await worker.setParameters({tessedit_pageseg_mode:'11',preserve_interword_spaces:'1'});
+  const sc=Math.max(.5,Math.min(2,1600/Math.max(v.videoWidth,v.videoHeight))),c=document.createElement('canvas'),ctx=c.getContext('2d',{willReadFrequently:true});c.width=Math.max(1,Math.round(v.videoWidth*sc));c.height=Math.max(1,Math.round(v.videoHeight*sc));
+  const th=document.createElement('canvas');th.width=32;th.height=18;const tx=th.getContext('2d',{willReadFrequently:true});let last=null;
+  const same=()=>{tx.drawImage(v,0,0,32,18);const d=tx.getImageData(0,0,32,18).data;let s=0;if(last)for(let i=0;i<d.length;i+=4)s+=Math.abs(d[i]-last[i])+Math.abs(d[i+1]-last[i+1])+Math.abs(d[i+2]-last[i+2]);const eq=!!last&&s/(d.length/4)<2;last=d;return eq};
+  const seek=t=>new Promise(r=>{let d=0;const fin=()=>{if(!d){d=1;v.onseeked=null;r()}};v.onseeked=fin;setTimeout(fin,3000);v.currentTime=Math.min(t,Math.max(0,v.duration-.05))});
+  let step=Math.max(.35,Math.min(.8,v.duration/180));if(v.duration/step>360)step=v.duration/360;
+  const total=Math.max(1,Math.ceil(v.duration/step)),tally=Matcher.createTally(index);let n=0,skipped=0;
+  for(let t=0;t<v.duration;t+=step){await seek(t);n++;
+   if(same()){skipped++}else{
+    ctx.drawImage(v,0,0,c.width,c.height);const im=ctx.getImageData(0,0,c.width,c.height),d=im.data;let lo=255,hi=0,sum=0;
+    for(let i=0;i<d.length;i+=4){const g=(d[i]*.299+d[i+1]*.587+d[i+2]*.114)|0;d[i]=g;if(g<lo)lo=g;if(g>hi)hi=g;sum+=g}
+    const inv=sum/(d.length/4)<115,rg=Math.max(40,hi-lo);
+    for(let i=0;i<d.length;i+=4){let g=(d[i]-lo)*255/rg;g=g<0?0:g>255?255:g;if(inv)g=255-g;d[i]=d[i+1]=d[i+2]=g}
+    ctx.putImageData(im,0,0);
+    const {data}=await worker.recognize(c);
+    const lines=(data.lines&&data.lines.length?data.lines:(data.blocks||[]).flatMap(b=>(b.paragraphs||[]).flatMap(p=>p.lines||[]))).map(l=>({text:l.text,bbox:l.bbox}));
+    if(!lines.length&&data.text)data.text.split('\n').forEach(x=>lines.push({text:x}));
+    tally.add(Matcher.matchLines(lines,index))}
+   $('#vp').style.width=Math.min(100,n/total*100)+'%';$('#vs').textContent=`Analisando ${n}/${total} quadros • ${tally.results().length} possíveis correspondências`}
+  await worker.terminate();worker=null;
+  const results=tally.results(),unk=tally.unknown(),sure=results.filter(r=>r.sure).length;
+  $('#vs').textContent=results.length||unk.length?`${sure} item(ns) com certeza alta (já marcados) e ${results.length-sure} para conferir (⚠️). Leitura de vídeo nunca é 100%: só o que está marcado entra automaticamente, confira o resto.`:'Não encontrei nenhum nome. Tente um vídeo mais nítido, com os nomes bem visíveis e sem pular rápido.';
+  const box=$('#vr');box.innerHTML='';
+  results.sort((a,b)=>(b.sure-a.sure)||a.name.localeCompare(b.name)).forEach(o=>{const row=document.createElement('div');row.className='row';const icon=o.kind==='set'?(ents('set').find(s=>String(s.ref)===o.ref)||{}).icon:o.ref;row.dataset.kind=o.kind;row.dataset.ref=o.ref;
+   row.innerHTML=`<input type="checkbox" ${o.sure?'checked':''}><img src="${IMG[icon]||ART.paw}"><span class="nm">${esc(o.name)}<br><small>${o.kind==='set'?'Set':'Item'} · visto ${o.count}x · ${o.sure?'✅ certeza alta':'⚠️ confira'}</small></span><input type="number" min="1" value="1" aria-label="Quantidade">`;box.appendChild(row)});
+  if(unk.length){const h=document.createElement('div');h.innerHTML='<small>Textos lidos que parecem nomes, mas não bateram com nenhum item. Se reconhecer, escolha qual é:</small>';box.appendChild(h);
+   unk.forEach(u=>{const row=document.createElement('div');row.className='row';row.dataset.unk='1';row.innerHTML=`<span class="nm">“${esc(u.text)}” <small>(visto ${u.count}x)</small></span><select><option value="">— ignorar —</option>${u.sug.map(s=>`<option value="${esc(s.c.kind+'|'+s.c.ref)}">${esc(s.c.name)}</option>`).join('')}</select>`;box.appendChild(row)})}
+  if(results.length||unk.length){const b=document.createElement('button');b.className='btn pri';b.textContent='➕ Adicionar selecionados à tabela';b.onclick=()=>{let count=0;box.querySelectorAll('.row').forEach(row=>{if(row.dataset.unk){const val=row.querySelector('select').value;if(val){const[k,r]=val.split('|');invAdd(k,k==='set'&&/^\d+$/.test(r)?+r:r,1);count++}}else if(row.querySelector('input[type=checkbox]').checked){const r=row.dataset.ref;invAdd(row.dataset.kind,row.dataset.kind==='set'&&/^\d+$/.test(r)?+r:r,Math.max(1,Math.floor(+row.querySelector('input[type=number]').value)||1));count++}});box.innerHTML='';toast(`${count} tipos adicionados à tabela! 🎉`)};box.appendChild(b)}
+ }catch(err){$('#vs').textContent=err.message||'Erro ao analisar o vídeo.';toast('Não foi possível analisar o vídeo.')}finally{if(worker)await worker.terminate();if(url)URL.revokeObjectURL(url);btn.disabled=false}};
+// ---------- conta ----------
+let amode='in';
+function forceLogout(msg){localStorage.removeItem(TOK);USER=null;dirty=false;DB=loadGuest();drawAuth();if($('#p5').classList.contains('on')||$('#p4').classList.contains('on'))$('.tab[data-p=p4]').click();else render();if(msg)toast(msg)}
+function drawAuth(){const b=$('#authbox');$('#acc').textContent=USER?'👤 '+USER.name:'👤 Entrar';$('#admtab').style.display=USER&&USER.admin?'':'none';
+ if(USER){b.innerHTML=`<h2>👤 ${esc(USER.name)}</h2><p>${USER.admin?'Você está como <b>administrador</b> 🛠️. A aba Admin altera o catálogo de todos. Preços, sets e tabela das outras abas continuam sendo só seus.':'Seus preços, sets e tabela estão salvos na sua conta. Entre com o mesmo nome e senha em outro aparelho para ver tudo igual.'}</p><button class="btn" id="aout">🚪 Sair</button>`;
+  $('#aout').onclick=async()=>{await push();try{await api('POST','/api/logout')}catch(e){}forceLogout('Você saiu 🌸')};drawAdmin();return}
+ b.innerHTML=`<h2>👤 Minha conta</h2><div class="tabs2" id="ak"><button class="on" data-k="in">Entrar</button><button data-k="up">Criar conta</button></div><div class="bar"><input class="s" id="au" placeholder="Nome de usuário" maxlength="24" autocomplete="username"></div><div class="bar"><input class="s" id="ap" type="password" placeholder="Senha (mínimo 6)" maxlength="128" autocomplete="current-password"></div><button class="btn pri" id="ago">🔑 Entrar</button><p style="font-size:.85rem">Sem conta, seus dados ficam só neste navegador. Ao criar a conta, o que você já montou aqui vai junto.</p>`;
+ amode='in';$('#ak').dataset.k='in';kindTabs($('#ak'),()=>{amode=$('#ak').dataset.k;$('#ago').textContent=amode=='in'?'🔑 Entrar':'🎀 Criar conta';$('#ap').autocomplete=amode=='in'?'current-password':'new-password'});
+ ['#au','#ap'].forEach(s=>$(s).onkeydown=e=>{if(e.key=='Enter')$('#ago').click()});
+ $('#ago').onclick=async e=>{const u=$('#au').value.trim(),p=$('#ap').value;if(!u||!p)return toast('Preencha nome e senha 🎀');const btn=$('#ago');btn.disabled=true;
+  try{const r=await api('POST',amode=='in'?'/api/login':'/api/register',amode=='in'?{username:u,password:p}:{username:u,password:p,state:DB});
+   localStorage.setItem(TOK,r.token);USER=r.user;DB=normDB(r.state);dirty=false;drawAuth();render();burst(e.clientX,e.clientY,20);toast(amode=='in'?'Bem-vinda(o), '+r.user.name+'! 💖':'Conta criada! 🎀')}
+  catch(err){toast(err.message)}finally{btn.disabled=false}}}
+// ---------- admin (o servidor confere de novo a cada pedido) ----------
+let aimg=null,achosen=[];
+const readImg=f=>new Promise((ok,no)=>{if(!f)return ok(null);if(!/^image\/(png|jpeg|webp|gif)$/.test(f.type))return no(Error('Use PNG, JPG, WEBP ou GIF.'));if(f.size>2*1024*1024)return no(Error('Imagem grande demais (máx. 2 MB).'));const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=()=>no(Error('Não consegui ler a imagem.'));r.readAsDataURL(f)});
+async function adm(fn,msg,redraw){try{await fn();await loadCatalog();render();drawAdmin(redraw);if(msg)toast(msg)}catch(e){toast(e.message);if(e.status==401)forceLogout('Sessão expirada. Entre novamente.');else drawAdmin(true)}}
+$('#af').onchange=async()=>{try{aimg=await readImg($('#af').files[0]);const p=$('#apv');p.style.display=aimg?'':'none';if(aimg)p.src=aimg}catch(e){aimg=null;$('#af').value='';$('#apv').style.display='none';toast(e.message)}};
+$('#aadd').onclick=async e=>{const n=$('#an').value.trim();if(!n||!aimg)return toast('Informe o nome e escolha a imagem 🎀');const b=$('#aadd');b.disabled=true;const x=e.clientX,y=e.clientY;
+ try{await api('POST','/api/admin/items',{name:n,price:+$('#ap1').value||0,image:aimg});await loadCatalog();$('#an').value=$('#ap1').value=$('#af').value='';aimg=null;$('#apv').style.display='none';render();drawAdmin(true);burst(x,y,24);toast('Item adicionado para todos! 🗡️')}
+ catch(err){toast(err.message);if(err.status==401)forceLogout('Sessão expirada. Entre novamente.')}finally{b.disabled=false}};
+function mkA(){picker($('#pkA'),()=>'item',e=>{const i=achosen.indexOf(e.ref);i<0?achosen.push(e.ref):achosen.splice(i,1);chipsA()},e=>achosen.includes(e.ref))}
+function chipsA(){$('#asc').innerHTML=achosen.length?'':'<span class="empty" style="padding:0">Nenhum item selecionado</span>';achosen.forEach(id=>{const c=document.createElement('span');c.className='chip';c.innerHTML=`<img src="${IMG[id]||ART.paw}">${esc(id.replace(/_/g,' '))} ✕`;c.onclick=()=>{achosen=achosen.filter(x=>x!=id);chipsA();$('#pkA').draw()};$('#asc').appendChild(c)})}
+$('#asv').onclick=async e=>{const n=$('#asn').value.trim();if(!n||!achosen.length)return toast('Dê um nome e escolha itens 🎀');const x=e.clientX,y=e.clientY;
+ try{await api('POST','/api/admin/sets',{name:n,price:+$('#asp').value||0,items:achosen});await loadCatalog();achosen=[];$('#asn').value=$('#asp').value='';render();drawAdmin(true);burst(x,y,24);toast('Set oficial criado! 🎀')}
+ catch(err){toast(err.message);if(err.status==401)forceLogout('Sessão expirada. Entre novamente.')}};
+$('#aq').oninput=()=>drawAdmin(true);
+function drawAdmin(list=true){if(!USER||!USER.admin)return;mkA();chipsA();if(!list)return;const l=$('#acat'),q=$('#aq').value.toLowerCase();l.innerHTML='';
+ const mk=(img,name,price,onName,onPrice,onImg,onDel)=>{const r=document.createElement('div');r.className='row';
+  r.innerHTML=`<img class="pix" src="${img}"><input class="nm" value="${esc(name)}" maxlength="60"><input type="number" step="0.01" min="0" value="${price}">${onImg?'<button class="btn sm" title="Trocar imagem">🖼️</button>':''}<button class="btn sm" title="Apagar">🗑</button><input type="file" accept="image/png,image/jpeg,image/webp,image/gif" style="display:none">`;
+  const[ni,pi,fi]=r.querySelectorAll('input'),bs=r.querySelectorAll('button');
+  ni.onchange=()=>onName(ni.value.trim());pi.onchange=()=>onPrice(+pi.value||0);
+  if(onImg){bs[0].onclick=()=>fi.click();fi.onchange=async()=>{try{onImg(await readImg(fi.files[0]))}catch(e){toast(e.message)}}}
+  bs[bs.length-1].onclick=onDel;return r};
+ const h=t=>{const d=document.createElement('h3');d.textContent=t;l.appendChild(d)};
+ h('Sets oficiais');GSETS.filter(s=>s.name.toLowerCase().includes(q)).forEach(s=>{const id=s.id.slice(1);l.appendChild(mk(IMG[s.icon]||ART.paw,s.name,s.price,
+  n=>adm(()=>api('PATCH','/api/admin/sets/'+id,{name:n}),'Nome salvo ✏️',false),p=>adm(()=>api('PATCH','/api/admin/sets/'+id,{price:p}),'Preço oficial salvo 💖',false),null,
+  ()=>{if(confirm('Apagar o set "'+s.name+'" para todos?'))adm(()=>api('DELETE','/api/admin/sets/'+id),'Set apagado 🗑',true)}))});
+ h('Itens oficiais');ITEMS.filter(i=>i.name.toLowerCase().includes(q)).forEach(i=>{const u='/api/admin/items/'+encodeURIComponent(i.id);l.appendChild(mk(i.img||ART.paw,i.name,i.price,
+  n=>adm(()=>api('PATCH',u,{name:n}),'Nome salvo ✏️',false),p=>adm(()=>api('PATCH',u,{price:p}),'Preço oficial salvo 💖',false),
+  im=>{if(im)adm(()=>api('PATCH',u,{image:im}),'Imagem trocada 🖼️',true)},
+  ()=>{if(confirm('Apagar "'+i.name+'" do catálogo de todos?'))adm(()=>api('DELETE',u),'Item apagado 🗑',true)}))})}
+// ---------- render / inicialização ----------
+function render(){mk1();mk2();chips();setList();mk3();drawInv();}
+async function boot(){
+ try{await loadCatalog()}catch(e){toast('Servidor indisponível. Tentando de novo…');setTimeout(boot,4000);return}
+ if(localStorage.getItem(TOK)){try{const r=await api('GET','/api/me');USER=r.user;DB=normDB(r.state)}catch(e){if(e.status==401)localStorage.removeItem(TOK);else{toast('Sem conexão com o servidor. Tentando de novo…');setTimeout(boot,4000);return}}}
+ if(!USER)DB=loadGuest();
+ drawAuth();render()}
+boot();
+</script>
+</body>
+</html>
